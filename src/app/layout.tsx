@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.scss";
+import Header from "@/screens/main/header/Header";
+import Footer from "@/screens/main/footer/Footer";
+
+const inter = Inter({
+   weight: ["300", "400", "500", "700"],
+   subsets: ["latin"],
+   display: "swap",
+});
 
 export const metadata: Metadata = {
    title: "Crypto Market",
@@ -13,7 +22,13 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body>{children}</body>
+         <body className={inter.className}>
+            <div className="wrapper">
+               <Header />
+               <main className="main">{children}</main>
+               <Footer />
+            </div>
+         </body>
       </html>
    );
 }

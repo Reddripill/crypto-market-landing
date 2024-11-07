@@ -1,0 +1,29 @@
+.footer {
+   @apply border-t border-white/25;
+}
+.footer-text {
+   @apply text-sm text-[#BCBCBC];
+   & > a {
+      @apply transition-colors hover:text-white;
+   }
+}
+.wrapper {
+   @apply md:pt-24 pt-14 md:pb-16 pb-5;
+}
+
+.content {
+   @apply flex justify-between items-start mb-20;
+}
+.information-title {
+   @apply mb-3 text-base #{!important};
+}
+.information-item {
+   @apply mb-2 last:mb-0;
+}
+.terms {
+   @apply flex max-sm:flex-col justify-between items-center
+   gap-y-2;
+}
+.terms-item {
+   @apply max-md:text-xs;
+}

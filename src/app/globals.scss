@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body,
+html {
+   @apply h-full w-full overflow-hidden text-white bg-main;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.wrapper {
+   @apply h-full flex flex-col;
+}
+.main {
+   @apply grow;
+}
+.container {
+   @apply max-w-[1070px] px-container mx-auto;
+}
+.section {
+   @apply mt-32;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+h1 {
+   @apply text-7xl leading-[86px] font-medium;
+}
+h2 {
+   @apply text-6xl leading-[78px] font-medium;
+}
+h3 {
+   @apply text-4xl;
+}
+h3 {
+   @apply text-2xl font-bold;
+}
+.uppercased-title {
+   @apply lg:text-base text-sm uppercase leading-6;
+}
+.text {
+   @apply text-lg;
+}
+
+.gradient {
+   @apply from-[#665DCD] via-[#5FA4E6] via-45%
+   to-[#D2AB67] bg-gradient-to-br;
 }

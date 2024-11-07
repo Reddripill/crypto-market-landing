@@ -1,0 +1,138 @@
+.header {
+   @apply h-20;
+}
+.wrapper {
+   @apply fixed w-full top-0 left-0 h-20 z-50;
+}
+.container {
+   @apply h-full max-w-[1320px] mx-auto px-container
+   flex items-center justify-between relative;
+}
+.text {
+   @apply lg:text-base text-sm uppercase leading-6;
+}
+.text,
+.arrow {
+   @apply cursor-pointer;
+}
+
+.menu {
+   @apply flex justify-center grow;
+}
+.contact {
+   @apply max-md:hidden flex items-center sm:gap-3 gap-2;
+}
+.attr {
+   @apply h-4 w-4 rounded-full;
+}
+
+.burger {
+   @apply relative h-5 w-8 md:hidden z-50 cursor-pointer;
+}
+.burger::after,
+.burger::before,
+.burger > span {
+   @apply absolute content-[''] left-0 w-full h-[2px]
+   bg-white transition-all;
+}
+.burger::before {
+   @apply top-0;
+}
+.burger::after {
+   @apply bottom-0;
+}
+.burger > span {
+   @apply top-[calc(50%-1px)];
+}
+.burger._open {
+   & > span {
+      @apply scale-0;
+   }
+   &.burger::before {
+      @apply top-[calc(50%-1px)] rotate-45;
+   }
+   &.burger::after {
+      @apply top-[calc(50%-1px)] -rotate-45;
+   }
+}
+
+.nav {
+   @apply flex items-center lg:gap-x-6 gap-x-4 gap-y-2;
+}
+.menu-item,
+.contact > .text,
+.sub-menu-text {
+   @apply transition-all hover:underline;
+}
+.contact-clone {
+   @apply md:hidden;
+}
+
+.sub-menu-container {
+   @apply relative cursor-pointer;
+}
+.arrow {
+   @apply transition-transform;
+}
+.arrow-icon {
+   @apply stroke-1 size-7;
+}
+.sub-menu {
+   @apply transition-all;
+}
+.sub-menu-link {
+   @apply flex items-center lg:gap-2 gap-1 md:py-2;
+}
+.sub-menu-item {
+   @apply mb-2 last:mb-0;
+}
+.sub-menu-text {
+   @apply text-base;
+}
+
+@media (min-width: 768px) {
+   .sub-menu-container:hover {
+      & .arrow {
+         @apply rotate-180;
+      }
+      & .sub-menu {
+         @apply opacity-100 visible pointer-events-auto
+         translate-y-0;
+      }
+   }
+   .sub-menu {
+      @apply absolute top-full left-0 min-w-[200px] bg-white
+      pointer-events-none text-black py-2 pl-4 opacity-0 invisible
+      -translate-y-4;
+   }
+}
+@media (max-width: 767px) {
+   .menu {
+      @apply fixed top-[100px] -right-full z-40 block h-full w-[200px]
+      px-container transition-all;
+   }
+   .menu._open {
+      @apply right-0;
+   }
+   .nav {
+      @apply block;
+   }
+   .menu-item,
+   .sub-menu-container {
+      @apply mb-4 last:mb-0;
+   }
+   .sub-menu-container._open {
+      & .sub-menu {
+         @apply h-auto max-h-[150px] transition-all;
+      }
+      & .arrow {
+         @apply rotate-180;
+      }
+   }
+   .sub-menu-link {
+      @apply justify-between;
+   }
+   .sub-menu {
+      @apply mt-1 pl-2 max-h-0 overflow-hidden transition-all;
+   }
+}

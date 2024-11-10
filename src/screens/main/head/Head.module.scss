@@ -1,0 +1,20 @@
+.wrapper {
+   @apply mt-7 lg:mb-64 md:mb-52 sm:mb-36 mb-28
+   lg:max-w-[550px] sm:max-w-[450px]
+   max-w-[350px] mx-auto text-center;
+}
+
+.title {
+   @apply mb-8;
+   & > h1 {
+      @apply xl:mb-14 lg:mb-10 mb-5 last:mb-0;
+   }
+}
+.text {
+   @apply mb-10;
+}
+.link {
+   @apply flex items-center justify-center
+   w-full h-full text-white lg:text-lg
+   sm:text-base text-sm uppercase font-medium;
+}

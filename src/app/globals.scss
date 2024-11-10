@@ -4,42 +4,53 @@
 
 body,
 html {
-   @apply h-full w-full overflow-hidden text-white bg-main;
+   @apply h-full w-full text-white bg-main;
 }
 
 .wrapper {
    @apply h-full flex flex-col;
 }
 .main {
-   @apply grow;
+   @apply grow mt-20;
 }
 .container {
    @apply max-w-[1070px] px-container mx-auto;
 }
 .section {
-   @apply mt-32;
+   @apply md:mb-32 mb-16;
 }
 
 h1 {
-   @apply text-7xl leading-[86px] font-medium;
+   @apply xl:text-7xl lg:text-6xl sm:text-5xl
+   text-4xl xl:leading-[86px] font-medium;
 }
 h2 {
-   @apply text-6xl leading-[78px] font-medium;
+   @apply xl:text-6xl lg:text-5xl sm:text-4xl
+   text-3xl xl:leading-[78px] font-medium;
 }
 h3 {
-   @apply text-4xl;
+   @apply lg:text-4xl sm:text-3xl text-2xl;
 }
-h3 {
-   @apply text-2xl font-bold;
+h4 {
+   @apply text-xl font-bold;
 }
 .uppercased-title {
    @apply lg:text-base text-sm uppercase leading-6;
 }
 .text {
-   @apply text-lg;
+   @apply lg:text-lg sm:text-base text-sm text-regular;
 }
 
 .gradient {
    @apply from-[#665DCD] via-[#5FA4E6] via-45%
    to-[#D2AB67] bg-gradient-to-br;
+}
+.border-gradient {
+   border-image: linear-gradient(
+      to right bottom,
+      #665dcd,
+      #5fa4e6 45%,
+      #d2ab67
+   );
+   border-image-slice: 1;
 }

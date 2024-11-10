@@ -1,0 +1,67 @@
+.wrapper {
+   @apply md:mb-32 mb-16;
+}
+
+.content {
+   @apply md:mb-7 mb-4 mx-auto text-center;
+}
+.title {
+   @apply mb-5;
+}
+.text {
+   @apply max-w-[550px] mx-auto;
+}
+
+.carousel {
+   @apply relative;
+}
+.carousel-body {
+   @apply md:pt-[100px] pt-[88px];
+}
+.carousel-arrows {
+   @apply flex items-center justify-center gap-x-8;
+}
+.carousel-arrows {
+   @apply absolute top-[0] left-0 w-full h-14 flex
+   items-center justify-center gap-x-8
+   md:translate-y-[calc(-100%-36px)] translate-y-[calc(-100%-24px)];
+}
+.carousel-arrow {
+   @apply md:size-14 size-12 cursor-pointer flex items-center
+   justify-center border rounded-full;
+}
+.carousel-dots {
+   @apply flex items-center justify-center gap-x-4
+   lg:mt-36 md:mt-24 mt-16;
+}
+.carousel-dot {
+   @apply size-2 rounded-full bg-[#333333];
+}
+.carousel-item {
+   @apply min-w-full px-[2px];
+}
+.carousel-container {
+   @apply max-w-[670px] mx-auto text-center;
+}
+.carousel-text {
+   @apply lg:text-2xl sm:text-xl text-lg md:mb-9
+   mb-6;
+}
+.carousel-name {
+   @apply md:text-lg text-base font-bold md:mb-5
+   mb-3;
+}
+.carousel-labels {
+   @apply flex items-center justify-center
+   gap-x-4;
+}
+.carousel-post {
+   @apply text-sm font-light;
+}
+.carousel-logo {
+   @apply relative pl-4;
+   &::before {
+      @apply content-[''] absolute top-0 left-0
+      bg-[#666666] h-full w-[1px];
+   }
+}

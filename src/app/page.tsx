@@ -1,3 +1,5 @@
+import MainPage from "@/screens/main/MainPage";
+
 export default function Home() {
-   return <div>Crypto Market</div>;
+   return <MainPage />;
 }

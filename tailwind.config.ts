@@ -8,6 +8,9 @@ const config: Config = {
    ],
    theme: {
       extend: {
+         screens: {
+            container: "1070px",
+         },
          backgroundColor: {
             main: "#141619",
          },

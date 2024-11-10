@@ -1,0 +1,6 @@
+.nuka-wrapper {
+   @apply gap-x-4;
+   & > div {
+      @apply -ml-1;
+   }
+}

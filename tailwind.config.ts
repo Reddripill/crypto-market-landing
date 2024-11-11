@@ -13,6 +13,7 @@ const config: Config = {
          },
          backgroundColor: {
             main: "#141619",
+            gray: "#242526",
          },
          colors: {
             regular: "#E5E5E5",

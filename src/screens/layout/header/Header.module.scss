@@ -1,12 +1,21 @@
 .header {
-   @apply h-20;
+   @apply w-full min-h-20;
 }
 .wrapper {
    @apply fixed w-full top-0 left-0 h-20 z-50;
+   &::before {
+      @apply content-[''] fixed w-full top-0
+      left-0 h-20 z-40 -translate-y-full
+      transition-all;
+   }
+   &.header-scrolled::before {
+      @apply translate-y-0 bg-gray;
+   }
 }
+
 .container {
    @apply h-full max-w-[1320px] mx-auto px-container
-   flex items-center justify-between relative;
+   flex items-center justify-between relative z-[50];
 }
 .text {
    @apply lg:text-base text-sm uppercase leading-6;
@@ -27,7 +36,7 @@
 }
 
 .burger {
-   @apply relative h-5 w-8 md:hidden z-50 cursor-pointer;
+   @apply relative h-5 w-8 md:hidden z-[80] cursor-pointer;
 }
 .burger::after,
 .burger::before,
@@ -101,21 +110,28 @@
       }
    }
    .sub-menu {
-      @apply absolute top-full left-0 min-w-[200px] bg-white
-      pointer-events-none text-black py-2 pl-4 opacity-0 invisible
+      @apply absolute top-full left-0 min-w-[200px] bg-gray
+      pointer-events-none text-white py-2 pl-4 opacity-0 invisible
       -translate-y-4;
    }
 }
 @media (max-width: 767px) {
+   .wrapper {
+      @apply bg-gray;
+   }
    .menu {
-      @apply fixed top-[100px] -right-full z-40 block h-full w-[200px]
-      px-container transition-all;
+      @apply fixed top-0 -right-full z-[70] block h-full w-[230px]
+      pr-container sm:pl-8 pl-6 transition-all bg-gray;
+   }
+   .container._open::after {
+      @apply content-[''] fixed top-0 right-0 z-[60] h-full w-full
+      bg-black/50 transition-colors;
    }
    .menu._open {
       @apply right-0;
    }
    .nav {
-      @apply block;
+      @apply pt-[100px] block;
    }
    .menu-item,
    .sub-menu-container {

@@ -9,7 +9,7 @@ const GradientIcon = ({
 }) => {
    return (
       <>
-         <svg width="0" height="0" gradientTransform="rotate(135)">
+         <svg width="0" height="0">
             <defs>
                <linearGradient id={id}>
                   <stop stopColor="#665dcd" offset="0%" />

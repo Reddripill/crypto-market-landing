@@ -55,8 +55,9 @@ const Content = () => {
                               <GradientIcon id="gradient-icon">
                                  <ArrowRight
                                     size={22}
-                                    style={{ stroke: "url(#gradient-icon)" }}
-                                    gradientUnits="userSpaceOnUse"
+                                    stroke="url(#gradient-icon)"
+                                    strokeWidth={2}
+                                    absoluteStrokeWidth={true}
                                  />
                               </GradientIcon>
                            </div>
